@@ -1,15 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
-import Logo from "./logo"
 import Navigation from "./navigation"
-
-import "../assets/scss/style.scss"
-import Footer from "./footer"
-import Theme from "../components/theme"
-import Search from "../components/search"
+import "../assets/scss/style.scss";
+import "../assets/scss/common.scss";
 
 const query = graphql`
   query LayoutQuery {
@@ -31,20 +26,14 @@ const Layout = ({ children, className, props }) => {
   return (
     <div className="primary-container">
       <Header>
-        <Logo title={siteTitle} />
         <div sx={layoutStyle.nav}>
-          <div sx={{ display: ["flex", "flex", "flex", "none"] }}>
-            <Search searchIndex={siteSearchIndex.index} />
-          </div>
           <Navigation />
         </div>
         <div sx={layoutStyle.appearance}>
-          <Search searchIndex={siteSearchIndex.index} />
-          <Theme />
+          <button className="call-to-action">Go to App</button>
         </div>
       </Header>
       <main className={"container " + className}>{children}</main>
-      <Footer />
     </div>
   )
 }

@@ -197,55 +197,13 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <div className="home-banner grids col-1 sm-2">
-        <div>
-          <h1 className="title">{frontmatter.title}</h1>
-          <p
-            className="tagline"
-            sx={{
-              color: "muted",
-            }}
-          >
-            {frontmatter.tagline}
-          </p>
-          <div
-            className="description"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-          <Link
-            to={frontmatter.cta.ctaLink}
-            className="button"
-            sx={{
-              variant: "variants.button",
-            }}
-          >
-            {frontmatter.cta.ctaText}
-            <span className="icon -right">
-              <RiArrowRightSLine />
-            </span>
-          </Link>
-          <div
-            className="social-icons"
-            sx={{
-              variant: "variants.socialIcons",
-            }}
-          >
-            {sIcons}
-          </div>
-        </div>
-        <div>
-          {Image ? (
-            <GatsbyImage
-              image={Image}
-              alt={frontmatter.title + " - Featured image"}
-              className="featured-image"
-            />
-          ) : (
-            ""
-          )}
+      <div className="home-banner grids col-1 sm-2 d-flex">
+        <div className="main-container">
+          <img src="/assets/app_logo.png" height="300" /> <br/><br/>
+          <button className="call-to-action-alt">Read the docs</button> &nbsp;
+          <button className="call-to-action">Go to V2 App</button>
         </div>
       </div>
-      <BlogListHome data={posts} />
     </Layout>
   )
 }

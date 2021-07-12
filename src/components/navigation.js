@@ -8,19 +8,19 @@ import Theme from "../components/theme"
 const MenuItems = [
   {
     path: "/",
-    title: "Home",
+    title: "App",
   },
   {
     path: "/about",
-    title: "About",
+    title: "Gallery",
   },
   {
     path: "/blog",
-    title: "Blog",
+    title: "Discord",
   },
   {
     path: "/contact",
-    title: "Contact",
+    title: "Docs",
   },
 ]
 
