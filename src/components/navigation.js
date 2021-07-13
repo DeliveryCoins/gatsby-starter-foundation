@@ -11,15 +11,15 @@ const MenuItems = [
     title: "App",
   },
   {
-    path: "/about",
-    title: "Gallery",
+    path: "/launch",
+    title: "Launch",
   },
   {
-    path: "/blog",
+    path: "/discord",
     title: "Discord",
   },
   {
-    path: "/contact",
+    path: "/docs",
     title: "Docs",
   },
 ]

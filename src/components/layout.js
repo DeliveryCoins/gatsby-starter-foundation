@@ -1,36 +1,23 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import Navigation from "./navigation"
+import { jsx } from "theme-ui";
+import Logo from "./logo";
+import Header from "./header";
+import Navigation from "./navigation";
 import "../assets/scss/style.scss";
 import "../assets/scss/common.scss";
+import Theme from "./theme";
 
-const query = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        siteTitle: title
-      }
-    }
-    siteSearchIndex {
-      index
-    }
-  }
-`
-
-const Layout = ({ children, className, props }) => {
-  const { site, siteSearchIndex } = useStaticQuery(query)
-  const { siteTitle } = site.siteMetadata
-
+const Layout = ({ children, className }) => {
   return (
     <div className="primary-container">
       <Header>
         <div sx={layoutStyle.nav}>
+        <Logo />
           <Navigation />
         </div>
         <div sx={layoutStyle.appearance}>
           <button className="call-to-action">Go to App</button>
+          <Theme />
         </div>
       </Header>
       <main className={"container " + className}>{children}</main>
