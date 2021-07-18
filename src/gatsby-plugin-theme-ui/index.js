@@ -14,6 +14,8 @@ const theme = {
     labelText: "#777",
     inputBorder: "#aaa",
     inputBackground: "#fff",
+    darkbutton: "#000",
+    darkButtontext: "#fff",
     socialIcons: lightness("siteColor", 0.4),
     socialIconsHover: lightness("siteColor", 0.3),
     buttonColor: lightness("siteColor", 0.9),
@@ -23,6 +25,8 @@ const theme = {
       dark: {
         text: "#f5f5f5",
         background: "#111",
+        darkbutton: "#fff",
+        darkButtontext: "#000",
         primary: "#252525",
         accent: "#5C2941",
         muted: "rgba(255, 255, 255, 0.7)",

@@ -2,3 +2,60 @@
   font-size: 24px;
   font-weight: 600px;
 }
+.boxes-container {
+  padding: 20px;
+  background-color: rgb(37, 37, 37) !important;
+  color: #fff;
+  text-align: center;
+}
+.boxes-container-feature {
+  padding: 20px;
+  background-color: transparent !important;
+  color: #fff;
+  text-align: center;
+  margin: auto !important;
+
+  div {
+    text-align: left;
+  }
+  .label {
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 2px solid #59A9DA;
+    color: #59A9DA;
+    border-radius: 10px;
+    width: fit-content;
+  }
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}
+.count {
+  color: green;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 10px;
+  line-height: 50px;
+}
+.table {
+  width: 100%;
+
+  border-collapse:separate;
+  border-spacing:0 10px;
+  
+  th, tr, td {
+    width: auto;
+    text-align: left;
+    padding: 20px;
+    color: #fff;
+  }
+  tr {
+    margin: 10px 0px;
+    background-color: rgb(37, 37, 37) !important;
+  }
+}

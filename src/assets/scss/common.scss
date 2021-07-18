@@ -20,3 +20,20 @@
   border: none;
   min-width: 100px;
 }
+@media (max-width: 767px) {
+  .grid {
+    display: block !important;
+    max-width: 100%;
+    overflow-x: scroll;
+    >div {
+      margin: 10px 0px;
+    }
+  }
+  .reverse-grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .site-header>div:first-child {
+    display: contents;
+  }
+}
